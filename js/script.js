@@ -2,6 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
+        const section = document.getElementById('about');
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const sectionPosition = section.offsetTop;
+        
         var nav = document.getElementById('nav');
         var navbar = document.getElementById('navbar');
         
@@ -21,5 +25,33 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.style.width = '100%';
             navbar.style.justifyContent = 'end';
         }
+
+        
+    });
+
+    window.addEventListener('scroll', function() {
+        const aboutSection = document.getElementById('about');
+        const navbar = document.getElementById('navbar');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.8 
+        };
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navbar.classList.remove("text-neutral-500");
+                navbar.classList.add("text-white");
+            } else {
+                navbar.classList.add("text-neutral-500");
+                navbar.classList.remove("text-white");
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(aboutSection);
     });
 });

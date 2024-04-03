@@ -4,13 +4,14 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/svgCss.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/script.js"></script>
 </head>
 <!-- <body class=" box-border relative"> -->
 <body class="bg-[#1e1d20] box-border relative">
 
-    <nav id="nav" class="mt-2 w-full max-w-[900px] m-auto fixed backdrop-blur-lg bg-transparent rounded-2xl duration-500">
+    <nav id="nav" class="mt-2 w-full max-w-[900px] m-auto fixed backdrop-blur-lg bg-transparent rounded-2xl duration-500 z-50">
         <div id="navbar" class="flex justify-end text-neutral-500 text-xs sm:text-base">
             <div class="flex text-center">
                 <a class="p-3 rounded-2xl hover:text-[#007bff] " href="#home">Inicio</a>
@@ -21,12 +22,16 @@
         </div>
     </nav> 
     
-    <main class="w-full max-w-[1220px] m-auto">
-        <section id="home" class="text-white min-h-screen">
-            <p>HeroPage</p>
+    <main class="w-full max-w-[1220px] m-auto min-h-screen">
+        <section id="home" class="relative text-white min-h-screen max-h-screen">
+            <div class="custom-shape-divider-bottom-1712110972">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
+            </div>
         </section>
 
-        <section id="about" class="text-white">
+        <section id="about" class="min-h-screen bg-[#007bff] text-white ">
             <p>Sobre</p>
         </section>
 
