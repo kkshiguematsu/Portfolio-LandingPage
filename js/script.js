@@ -41,17 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const callback = (entries, observer) => {
             entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navbar.classList.remove("text-neutral-500");
-                navbar.classList.add("text-white");
-            } else {
-                navbar.classList.add("text-neutral-500");
-                navbar.classList.remove("text-white");
-            }
-        });
-    };
+                if (entry.isIntersecting) {
+                    navbar.classList.remove("text-neutral-500");
+                    navbar.classList.add("text-white");
+                } else {
+                    navbar.classList.add("text-neutral-500");
+                    navbar.classList.remove("text-white");
+                }
+            });
+        };
 
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(aboutSection);
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(aboutSection);
     });
 });
