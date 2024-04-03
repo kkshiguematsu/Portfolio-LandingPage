@@ -1,0 +1,35 @@
+:root{
+    --background: #1e1d20;
+    --background-card: #413f46;
+    --primary: #007bff;
+    --primary-dark: #0054ae;
+}
+
+/* main{
+    color: white;
+    background-color: var(--primary);
+} */
+
+nav{
+    top: 2;
+    left: 50%;
+    transform: translate(-50%);
+}
+nav div div a{
+    position: relative;
+}
+nav div div a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--primary);
+    height: 1.5px;
+    width: 0;
+    left: 15%;
+    bottom: 5px;
+    transition: 0.5s;
+}
+
+nav div div a:hover:after{
+    width: 70%;
+}
+
