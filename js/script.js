@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (scrollTop !== 0) {
             nav.style.width = '280px';
             nav.classList.remove("bg-transparent")
-            nav.classList.add("bg-stone-700/10")
+            nav.classList.add("bg-neutral-900/70")
             nav.classList.add("shadow-lg")
             navbar.style.justifyContent = 'center';
         } else {
             nav.classList.remove("shadow-lg")
-            nav.classList.remove("bg-stone-700/10")
+            nav.classList.remove("bg-neutral-900/70")
             nav.classList.add("bg-transparent")
             nav.style.width = '100%';
             navbar.style.justifyContent = 'end';

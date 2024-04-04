@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Reddit+Mono:wght@200..900&display=swap');
+
 :root{
     --background: #1e1d20;
     --background-card: #413f46;
     --primary: #007bff;
     --primary-dark: #0054ae;
+    --title-font: "Pacifico", cursive;
+    --text-font: "Reddit Mono", monospace;
 }
 
 /* main{
     color: white;
     background-color: var(--primary);
 } */
+
+
 
 nav{
     top: 2;
@@ -31,5 +37,14 @@ nav div div a:after{
 
 nav div div a:hover:after{
     width: 70%;
+}
+
+#portfolio-title{
+    font-family: var(--title-font);
+    text-shadow: 5px 5px var(--primary);
+}
+
+p{
+    font-family: var(--text-font);
 }
 
