@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.remove("w-full")
             nav.classList.remove("bg-transparent")
             nav.classList.add("w-[18.2rem]")
-            nav.classList.add("sm:w-[21.5px]")
+            nav.classList.add("sm:w-[21.5rem]")
             nav.classList.add("bg-neutral-900/70")
             nav.classList.add("shadow-lg") 
         } else {
