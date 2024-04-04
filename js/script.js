@@ -10,48 +10,52 @@ document.addEventListener('DOMContentLoaded', function() {
         var navbar = document.getElementById('navbar');
         
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        // bg-stone-700/10
-        // Check if scroll position is not at the top
         if (scrollTop !== 0) {
-            nav.style.width = '280px';
+            nav.classList.remove("w-full")
             nav.classList.remove("bg-transparent")
+            nav.classList.add("w-[291px]")
+            nav.classList.add("sm:w-[344px]")
             nav.classList.add("bg-neutral-900/70")
-            nav.classList.add("shadow-lg")
-            navbar.style.justifyContent = 'center';
+            nav.classList.add("shadow-lg") 
         } else {
+            nav.classList.remove("w-[291px]")
+            nav.classList.remove("sm:w-[344px]")
             nav.classList.remove("shadow-lg")
             nav.classList.remove("bg-neutral-900/70")
+            nav.classList.add("w-full")
             nav.classList.add("bg-transparent")
-            nav.style.width = '100%';
-            navbar.style.justifyContent = 'end';
         }
-
-        
     });
 
     window.addEventListener('scroll', function() {
-        const aboutSection = document.getElementById('about');
-        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.8 
+            threshold: 0.7
         };
 
         const callback = (entries, observer) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navbar.classList.remove("text-neutral-500");
-                    navbar.classList.add("text-white");
-                } else {
-                    navbar.classList.add("text-neutral-500");
-                    navbar.classList.remove("text-white");
+                if (entry.isIntersecting) 
+                {
+                    const sectionId = entry.target.id;
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href').slice(1) === sectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
                 }
             });
         };
 
         const observer = new IntersectionObserver(callback, options);
-        observer.observe(aboutSection);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     });
 });
