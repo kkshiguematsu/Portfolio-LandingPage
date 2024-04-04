@@ -2,13 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
-        const section = document.getElementById('about');
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const sectionPosition = section.offsetTop;
-        
         var nav = document.getElementById('nav');
-        var navbar = document.getElementById('navbar');
-        
+
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop !== 0) {
             nav.classList.remove("w-full")
