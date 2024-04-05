@@ -2,8 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
+        const section = document.getElementById('about');
+        const sectionPosition = section.offsetTop;
+        
         var nav = document.getElementById('nav');
-
+        var navbar = document.getElementById('navbar');
+        
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop !== 0) {
             nav.classList.remove("w-full")
@@ -13,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.add("bg-neutral-900/70")
             nav.classList.add("shadow-lg") 
         } else {
-            nav.classList.remove("w-[291px]")
-            nav.classList.remove("sm:w-[344px]")
+            nav.classList.remove("w-[18.2rem]")
+            nav.classList.remove("sm:w-[21.5rem]")
             nav.classList.remove("shadow-lg")
             nav.classList.remove("bg-neutral-900/70")
             nav.classList.add("w-full")
