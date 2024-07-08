@@ -13,9 +13,6 @@
     color: white;
     background-color: var(--primary);
 } */
-
-
-
 nav{
     top: 2;
     left: 50%;
@@ -38,6 +35,10 @@ nav{
 #portfolio-title{
     font-family: var(--title-font);
     text-shadow: 5px 5px var(--primary);
+}
+
+.title-font-family{
+    font-family: var(--title-font);
 }
 
 p{

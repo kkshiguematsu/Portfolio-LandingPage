@@ -25,6 +25,29 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.add("bg-transparent")
         }
     });
+    
+    // window.addEventListener('scroll', function() {
+    //     var socialMediaLinks = document.getElementById("social-media-links");
+    //     const originalPosition = socialMediaLinks.offsetTop
+    //     console.log(window.pageYOffset)
+    //     console.log(originalPosition)
+    //     if (window.pageYOffset > originalPosition) {
+    //         socialMediaLinks.classList.remove("text-5xl")
+    //         socialMediaLinks.classList.remove("absolute")
+    //         socialMediaLinks.classList.remove("sm:bottom-0")
+    //         socialMediaLinks.classList.remove("bottom-5")
+    //         socialMediaLinks.classList.add("text-3xl")
+    //         socialMediaLinks.classList.add("fixed")
+    //     }  
+    //     if (window.pageYOffset < originalPosition) {
+    //         socialMediaLinks.classList.add("text-5xl")
+    //         socialMediaLinks.classList.add("absolute")
+    //         socialMediaLinks.classList.add("sm:bottom-0")
+    //         socialMediaLinks.classList.add("bottom-5")
+    //         socialMediaLinks.classList.remove("text-3xl")
+    //         socialMediaLinks.classList.remove("fixed")
+    //     }
+    // });
 
     window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section');
