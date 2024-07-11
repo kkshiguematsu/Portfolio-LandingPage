@@ -45,3 +45,6 @@ p{
     font-family: var(--text-font);
 }
 
+.custom-filter {
+    filter: invert(1);
+  }
