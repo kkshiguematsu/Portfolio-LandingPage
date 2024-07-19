@@ -47,4 +47,23 @@ p{
 
 .custom-filter {
     filter: invert(1);
-  }
+}
+
+.custom-shape-divider-bottom-1712110972 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
