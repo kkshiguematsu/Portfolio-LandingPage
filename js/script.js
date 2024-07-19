@@ -30,18 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function(event) {
-          event.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          const targetPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = targetPosition - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
-    
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+            if(window.innerWidth > 700){
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const targetPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = targetPosition - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
-      });
+    });
     
     // window.addEventListener('scroll', function() {
     //     var socialMediaLinks = document.getElementById("social-media-links");
