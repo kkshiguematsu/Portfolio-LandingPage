@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (scrollTop !== 0) {
             nav.classList.remove("w-full")
             nav.classList.remove("bg-transparent")
-            nav.classList.add("w-[18.2rem]")
-            nav.classList.add("sm:w-[21.5rem]")
+            nav.classList.add("w-[19.3rem]")
+            nav.classList.add("sm:w-[23.3rem]")
             nav.classList.add("bg-neutral-900/70")
             nav.classList.add("shadow-lg") 
         } else {
-            nav.classList.remove("w-[18.2rem]")
-            nav.classList.remove("sm:w-[21.5rem]")
+            nav.classList.remove("w-[19.3rem]")
+            nav.classList.remove("sm:w-[23.3rem]")
             nav.classList.remove("shadow-lg")
             nav.classList.remove("bg-neutral-900/70")
             nav.classList.add("w-full")
