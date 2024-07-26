@@ -27,6 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.add("bg-transparent")
         }
     });
+    
+    document.addEventListener('scroll', () => {
+        const stickyDiv = document.getElementById('stickyDiv');
+        const growParentDiv = document.getElementById('growParentDiv');
+        const growingDiv = document.getElementById('growingDiv');
+
+        const parentRect = growParentDiv.getBoundingClientRect();
+        const stickyRect = stickyDiv.getBoundingClientRect();
+        const newHeight = stickyRect.top - parentRect.top;
+        growingDiv.style.height = `${newHeight + 8}px`;
+        console.log(growingDiv.style.height)
+    });
 
     // document.querySelectorAll('.nav-link').forEach(link => {
     //     link.addEventListener('click', function(event) {
