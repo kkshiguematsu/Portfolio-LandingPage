@@ -2,45 +2,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    ScrollReveal().reveal('.reveal-right', {
-        distance: '100px',
-        duration: 800,
-        easing: 'ease-in-out',
-        origin: 'right',
-        reset: false // Use `reset: false` se quiser que a animação aconteça toda vez que rolar de volta para o elemento.
-      });
-    ScrollReveal().reveal('.reveal-left', {
-        distance: '50px',
-        duration: 800,
-        easing: 'ease-in-out',
-        origin: 'left',
-        reset: false // Use `reset: false` se quiser que a animação aconteça toda vez que rolar de volta para o elemento.
-      });
+    
 
 
-    // window.addEventListener('scroll', () => {
-    //     const section = document.getElementById('about');
-    //     const sectionPosition = section.offsetTop;
+    window.addEventListener('scroll', () => {
+        const section = document.getElementById('about');
+        const sectionPosition = section.offsetTop;
         
-    //     var nav = document.getElementById('nav');
+        var nav = document.getElementById('nav');
         
-    //     var scrollTop =  document.documentElement.scrollTop;
-    //     if (scrollTop !== 0) {
-    //         nav.classList.remove("w-full")
-    //         nav.classList.remove("bg-transparent")
-    //         nav.classList.add("shadow-lg") 
-    //         nav.classList.add("w-[19.3rem]")
-    //         nav.classList.add("sm:w-[23.3rem]")
-    //         nav.classList.add("bg-neutral-900/70")
-    //     } else {
-    //         nav.classList.add("w-full")
-    //         nav.classList.add("bg-transparent")
-    //         nav.classList.remove("shadow-lg")
-    //         nav.classList.remove("w-[19.3rem]")
-    //         nav.classList.remove("sm:w-[23.3rem]")
-    //         nav.classList.remove("bg-neutral-900/70")
-    //     }
-    // });
+        var scrollTop =  document.documentElement.scrollTop;
+        if (scrollTop !== 0) {
+            nav.classList.remove("w-full")
+            nav.classList.remove("bg-transparent")
+            nav.classList.add("shadow-lg") 
+            nav.classList.add("w-[19.3rem]")
+            nav.classList.add("sm:w-[23.3rem]")
+            nav.classList.add("bg-neutral-900/70")
+        } else {
+            nav.classList.add("w-full")
+            nav.classList.add("bg-transparent")
+            nav.classList.remove("shadow-lg")
+            nav.classList.remove("w-[19.3rem]")
+            nav.classList.remove("sm:w-[23.3rem]")
+            nav.classList.remove("bg-neutral-900/70")
+        }
+    });
     
     document.addEventListener('scroll', () => {
         const stickyDiv = document.getElementById('stickyDiv');
@@ -84,4 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         });
     });
+
+    ScrollReveal().reveal('.reveal-right', {
+        distance: '100px',
+        duration: 800,
+        easing: 'ease-in-out',
+        origin: 'right',
+        reset: false
+      });
+    ScrollReveal().reveal('.reveal-left', {
+        distance: '50px',
+        duration: 800,
+        easing: 'ease-in-out',
+        origin: 'left',
+        reset: false
+      });
 });
