@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.7
+            threshold: 0.29
         };
 
         const callback = (entries, observer) => {
